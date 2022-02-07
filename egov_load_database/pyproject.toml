@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "egov_load_database"
+version = "0.1.0"
+description = "EGov Load Test for Database API"
+authors = ["Joan Killeen <joan.killeen@ipi.ch>"]
+
+[tool.poetry.dependencies]
+python  = "^3.9"
+locust  = "^2.5.1"
+urllib3 = ">=1.21.1,<1.27"
+
+[[tool.poetry.source]]
+name = "ipi"
+url = "https://repository.ipie.ch/repository/pypi-public/simple"
+default = true
+
+[[tool.poetry.source]]
+name = "ipi-publish"
+url = "https://repository.ipie.ch/repository/ipi-pypi/"
+secondary = true
+
+[tool.poetry.scripts]
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
